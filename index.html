@@ -1,13 +1,90 @@
 <!DOCTYPE html>
-    <head></head>
-    <body>
-        <button onClick="openURL('https://puppy38.github.io/MusicPlayerWebsite')"><img src='./resources/MPscreenshot.png' width="207" height="155"><br>MusicPlayer</button>
-        <button onClick="openURL('https://puppy38.github.io/AudioPlayer')"><img src='./resources/AUplayer.png' width="207" height="155"><br>Online Audio Player</button>
-        <button onClick="openURL('https://puppy38.github.io/CoolPhotoViewerWebsite')"><img src='./resources/coolPV.png' width="207" height="155"><br>Cool Photo Viewer</button>
-        <script>
-            function openURL(url) {
-                open(url)
-            }
-        </script>
-    </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f1115;
+    color: #eaeaea;
+    padding: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Card */
+.card {
+    background: #151821;
+    border: 1px solid #2a2f3a;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #3a4252;
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Title */
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+/* Description */
+.card p {
+    color: #aaa;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+<div class="card" onclick="openURL('https://puppy38.github.io/MusicPlayerWebsite')">
+    <img src="./resources/MPscreenshot.png">
+    <h3>Music Player</h3>
+    <p>Simple music player.</p>
+</div>
+
+<div class="card" onclick="openURL('https://puppy38.github.io/AudioPlayer')">
+    <img src="./resources/AUplayer.png">
+    <h3>Online Audio Player</h3>
+    <p>Play audio files directly online.</p>
+</div>
+
+<div class="card" onclick="openURL('https://puppy38.github.io/CoolPhotoViewerWebsite')">
+    <img src="./resources/coolPV.png">
+    <h3>Cool Photo Viewer</h3>
+    <p>View and export images.</p>
+</div>
+
+</div>
+
+<script>
+function openURL(url) {
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
 </html>
